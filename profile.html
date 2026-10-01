@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Save your ShopKart contact details and delivery address.">
+  <title>Your profile | ShopKart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body data-page="profile">
+  <header class="site-header">
+    <div class="header-main container profile-header">
+      <a class="brand" href="index.html" aria-label="ShopKart home"><span class="brand-mark">S</span><span>shop<span class="brand-accent">kart</span></span></a>
+      <div class="delivery-note"><span class="pin-icon" aria-hidden="true">&#9678;</span><span><small>Delivering to</small><strong>Your location</strong></span></div>
+      <div class="header-actions"><a class="header-link account-link" href="profile.html"><span class="action-icon" aria-hidden="true">&#9786;</span><span><small>Hello, guest</small><strong>Account</strong></span></a><a class="cart-link" href="cart.html" aria-label="Shopping cart"><span class="cart-icon" aria-hidden="true">&#128722;</span><span class="cart-count" data-cart-count>0</span><strong>Cart</strong></a></div>
+      <a class="profile-home-link" href="index.html">Continue shopping <span aria-hidden="true">&#8594;</span></a>
+    </div>
+  </header>
+  <main class="container profile-page">
+    <div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><span>Your profile</span></div>
+    <div class="profile-heading"><div><p class="eyebrow">YOUR DETAILS, IN ONE PLACE</p><h1>Your profile</h1><p>Keep your contact details and delivery address ready for checkout.</p></div><span class="profile-local-note">Saved on this device</span></div>
+    <div class="profile-layout">
+      <form class="profile-form" id="profile-form">
+        <div class="profile-section-heading"><span class="profile-step">01</span><div><h2>Contact details</h2><p>Who should we get in touch with?</p></div></div>
+        <div class="profile-fields">
+          <div class="form-field profile-full"><label for="profile-name">Full name</label><input id="profile-name" name="name" autocomplete="name" required maxlength="80" placeholder="Enter your name"></div>
+          <div class="form-field profile-full"><label for="profile-mobile">Mobile number</label><input id="profile-mobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9]{10}" required placeholder="10-digit mobile number"></div>
+        </div>
+        <div class="profile-section-heading address-heading"><span class="profile-step">02</span><div><h2>Delivery address</h2><p>Search the map, then save the address for delivery.</p></div></div>
+        <div class="profile-fields">
+          <div class="form-field profile-full"><label for="profile-address">House, street, and area</label><textarea id="profile-address" name="address" autocomplete="street-address" required maxlength="240" rows="3" placeholder="Flat or house number, street, area"></textarea></div>
+          <div class="form-field"><label for="profile-city">City</label><input id="profile-city" name="city" autocomplete="address-level2" required placeholder="City"></div>
+          <div class="form-field"><label for="profile-state">State</label><input id="profile-state" name="state" autocomplete="address-level1" required placeholder="State"></div>
+          <div class="form-field profile-full"><label for="profile-pin">PIN code</label><input id="profile-pin" name="pinCode" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{6}" required placeholder="6-digit PIN code"></div>
+        </div>
+        <div class="profile-actions"><button class="button button-dark" type="submit">Save profile <span aria-hidden="true">&#8594;</span></button><span id="profile-save-status" role="status"></span></div>
+      </form>
+      <section class="profile-map-panel" aria-labelledby="map-heading">
+        <div class="map-heading"><div><p class="eyebrow">CHECK THE LOCATION</p><h2 id="map-heading">Find your address</h2></div><span class="map-pin" aria-hidden="true">&#9678;</span></div>
+        <p class="map-description">Enter your address to preview it on Google Maps. Open the map to confirm the location, then save your details.</p>
+        <div class="map-frame"><iframe id="profile-map" title="Google Maps address preview" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=India&amp;output=embed"></iframe></div>
+        <a class="button button-outline map-link" id="profile-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=India" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">&#8599;</span> Open in Google Maps</a>
+        <p class="map-footnote">Your saved address stays in this browser and is used to fill checkout details.</p>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark">S</span><span>shop<span class="brand-accent">kart</span></span></a><p>Good finds for the everyday.</p><span>&copy; 2026 ShopKart. A demo storefront.</span></div></footer>
+  <div class="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
